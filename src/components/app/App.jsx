@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SearchBar from "../searchBar/";
+import SearchBar from "../searchBar/SearchBar";
 import ImageGallery from "../imageGallery/ImageGallery";
 import Loader from "../loader/Loader";
 import ErrorMessage from "../errorMessage/ErrorMessage";
