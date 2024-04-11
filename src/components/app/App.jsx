@@ -65,19 +65,14 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (query !== "") {
-      fetchImages(query, 1);
-      setPage(1);
-      setImages([]);
-      setHasMoreImages(true);
-    }
-    if (page > 1) {
-      fetchImages(query, page);
-    }
+    if (!query) return;
+    fetchImages(query, page);
   }, [query, page]);
 
   const handleSearch = (query) => {
     setQuery(query);
+    setPage(1);
+    setImages([]);
   };
 
   const loadMore = () => {
